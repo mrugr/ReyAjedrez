@@ -30,6 +30,27 @@ package org.iesalandalus.programacion.reyajedrez;
 
         }
 
+        //Constructor con parámetros fila y columna
+
+        public Posicion (int fila,char columna){
+            setFila(fila);
+            setColumna(columna);
+        }
+
+        //constructor copia y validación de fila y columna
+
+        public Posicion (Posicion posicion){
+            if(posicion!=null){
+                setFila(posicion.getFila());
+                setColumna(posicion.getColumna());
+            }else{
+                //Excepción de tipo IllegalArgumentException
+                throw new IllegalArgumentException("ERROR:no es una posición válida");
+            }
+
+        }
+
+
 
 
 
