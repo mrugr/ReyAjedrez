@@ -14,6 +14,11 @@ package org.iesalandalus.programacion.reyajedrez;
         Color() {
 
         }
+
+        public String toString(){
+            return cadenaAMostrar;
+        }
+
     }
 
 
