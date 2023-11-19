@@ -1,6 +1,8 @@
 package org.iesalandalus.programacion.reyajedrez;
 
-    public class Posicion {
+import java.util.Objects;
+
+public class Posicion {
         private int fila;
         private char columna;
 
@@ -51,10 +53,27 @@ package org.iesalandalus.programacion.reyajedrez;
         }
 
 
-
-
+        //Métodos equals y hashCode
+    @Override
+        public boolean equals(Object o){
+            if(this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false ;
+            Posicion posicion = (Posicion) o;
+            return fila ==posicion.fila && columna == posicion.columna;
 
         }
+
+        @Override
+
+        public int hashCode (){
+          return Objects.hash(fila,columna);
+        }
+
+        }
+
+
+
+
 
 
 
